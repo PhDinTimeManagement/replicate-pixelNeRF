@@ -1,0 +1,32 @@
+# Before run the
+# conda search pytorch, replace the version of pytorch and torchvision, skimage
+
+# run: conda env create -f environment.yml
+name: pixelnerf
+channels:
+  - conda-forge # Add conda-forge channel
+  - pytorch
+  - defaults
+dependencies:
+  - python>=3.8
+  - pip
+  - pip:
+      - pyhocon
+      - opencv-python
+      - dotmap
+      - tensorboard
+      - imageio
+      - imageio-ffmpeg
+      - ipdb
+      - pretrainedmodels
+      - lpips
+  - scipy
+  - numpy
+  - matplotlib
+#  - pytorch==1.6.0
+#  - torchvision==0.7.0
+#  - scikit-image==0.17.2
+  - pytorch==1.10.2
+  - torchvision==0.11.3
+  - scikit-image==0.19.3
+  - tqdm
